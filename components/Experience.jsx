@@ -11,7 +11,7 @@ const experience = [
   {
     role: "Graduate Assistant",
     company: "Eastern Illinois University",
-    duration: "Dec 2024 – Present",
+    duration: "Sep 2024 – Present",
     icon: "🎓",
     impact: { backend: 85, frontend: 80, devops: 45, data: 75 },
     points: [
@@ -23,21 +23,9 @@ const experience = [
     ],
   },
   {
-    role: "Full Stack Developer",
-    company: "Self-Employed",
-    duration: "Feb 2024 – Dec 2024",
-    icon: "🛠️",
-    impact: { backend: 85, frontend: 75, devops: 35, data: 65 },
-    points: [
-      "Designed and delivered full-stack enterprise web applications using Spring Boot and ReactJS.",
-      "Developed secure REST APIs, implemented JWT-based authentication, and optimized SQL performance.",
-      "Deployed scalable applications on cloud platforms ensuring stability and cost efficiency."
-    ],
-  },
-  {
     role: "Senior Software Engineer",
     company: "Capgemini",
-    duration: "Oct 2022 – Feb 2024",
+    duration: "Oct 2022 – Aug 2024",
     icon: "🏢",
     impact: { backend: 90, frontend: 60, devops: 55, data: 80 },
     points: [
