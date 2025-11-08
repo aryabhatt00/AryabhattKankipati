@@ -11,7 +11,7 @@ const ProfilePanel = () => {
 
 <img
   src="/arya_professional.jpg"
-  srcSet="/arya_professional.jpg 1x, /arya_professional@2x.jpg 2x, /arya_professional@3x.jpg 3x"
+
   alt="Aryabhatt"
   className="relative w-56 h-56 md:w-64 md:h-64
              rounded-full object-cover object-top

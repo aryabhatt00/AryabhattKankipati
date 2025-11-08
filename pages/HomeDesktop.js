@@ -18,7 +18,15 @@ import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
 // © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
 export default function HomeDesktop({ active, scrollToSection, refs }) {
-  const { aboutRef, techRef, educationRef, experienceRef, projectsRef, contactRef } = refs;
+  const {
+  aboutRef,
+  techRef,
+  educationRef,
+  experienceRef,
+  projectsRef,
+  contactRef,
+} = refs || {};
+
 
   return (
     <div className="hidden lg:flex w-full">

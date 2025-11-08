@@ -18,7 +18,14 @@ import {
 } from "lucide-react";
 // © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
 export default function HomeMobile({ active, setActive, scrollToSection, refs }) {
-  const { aboutRef, techRef, educationRef, experienceRef, projectsRef, contactRef } = refs;
+  const {
+  aboutRef,
+  techRef,
+  educationRef,
+  experienceRef,
+  projectsRef,
+  contactRef,
+} = refs || {};
 
   const sections = [
     { id: "about", label: "Home", icon: HomeIcon, ref: aboutRef },
