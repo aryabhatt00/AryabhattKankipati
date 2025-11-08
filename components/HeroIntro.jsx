@@ -23,19 +23,22 @@ export default function HeroIntro() {
         </h2>
 
         {/* POSITIONING STATEMENT */}
-        <p className="text-gray-300 text-lg leading-relaxed max-w-4xl">
-          I specialize in crafting scalable, secure backend systems and intuitive frontends that bridge performance with user delight.
-          From RESTful APIs and Spring Boot microservices to full-stack dashboards with CI/CD pipelines — I deliver value with every deploy.
-        </p>
+{/* POSITIONING STATEMENT */}
+<p className="text-gray-300 text-lg leading-relaxed max-w-4xl">
+  I build scalable backend systems and immersive frontends that blend performance, reliability, and design excellence. 
+  From secure Spring Boot microservices and REST APIs to React-based dashboards and intelligent ML-driven components powered by CI/CD pipelines - every line of code I write is aimed at seamless user experience and measurable impact.
+</p>
 
-        {/* IMPACT LIST */}
-        <ul className="text-gray-300 text-base leading-relaxed space-y-2 pl-4 list-disc max-w-3xl">
-          <li>💡 Engineered OTP-secured banking flows using Spring Boot, JWT & React</li>
-          <li>🔐 Built full-stack RBAC-authenticated apps with Hibernate and PostgreSQL</li>
-          <li>📊 Developed dashboards using React.js, Chart.js, and REST APIs</li>
-          <li>🚀 Dockerized apps & deployed with AWS CI/CD pipelines</li>
-          <li>🧠 Built intelligent OCR-based expense splitting systems with MongoDB</li>
-        </ul>
+{/* IMPACT LIST */}
+<ul className="text-gray-300 text-base leading-relaxed space-y-2 pl-4 list-disc max-w-3xl">
+  <li>💡 Designed OTP-verified banking transactions using Spring Boot, JWT, and React</li>
+  <li>🔐 Built role-based access control (RBAC) systems with Hibernate and PostgreSQL</li>
+  <li>📊 Created dynamic analytics dashboards with React.js, Chart.js, and REST APIs</li>
+  <li>🤖 Integrated ML pipelines for intelligent data analysis and predictive automation</li>
+  <li>🚀 Containerized and deployed production-ready apps via Docker and AWS CI/CD</li>
+  <li>🧠 Engineered an AI-driven OCR expense splitter with MongoDB and Spring Boot</li>
+</ul>
+
 
         {/* CTA BUTTONS */}
         <div className="flex flex-wrap gap-4 pt-6">

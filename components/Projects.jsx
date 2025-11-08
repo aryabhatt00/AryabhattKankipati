@@ -23,7 +23,7 @@ const projects = [
     description:
       "AI-powered receipt scanner and smart split engine that identifies items, extracts prices, and calculates individual shares automatically using OCR + Spring Boot + Salesforce integration.",
     stack: ["Spring Boot", "React", "MongoDB", "Google Vision API"],
-    github: "https://github.com/aryabhatt00/BroPay",
+    
     icon: "🧾",
     solution:
       "Simplified expense sharing for users by automating receipt-based split calculations securely and accurately.",
