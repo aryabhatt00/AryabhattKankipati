@@ -48,6 +48,19 @@ const experience = [
     ],
   },
   {
+  role: "Machine Learning Intern",
+  company: "TCR Innovation",
+  duration: "Aug 2021 – Oct 2021",
+  icon: "🤖",
+  impact: { ml: 90, ai: 85, data: 80, research: 75 },
+  points: [
+    "Developed end-to-end Machine Learning pipelines using Python, NumPy, Pandas, and Scikit-learn.",
+    "Trained and optimized regression and classification models for real-world datasets with performance benchmarking.",
+    "Explored AI-driven insights through data preprocessing, feature engineering, and model evaluation under the Technical Coding Research Innovation program.",
+  ],
+},
+
+  {
     role: "Full Stack Developer Intern",
     company: "Spark Foundation",
     duration: "Jul 2021 – Aug 2021",
