@@ -1,4 +1,4 @@
-// © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati 
+// © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
 // Built with ❤️ using React, Tailwind CSS, and Framer Motion
 
 "use client";
@@ -114,9 +114,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
-className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justify-start text-left space-y-6"
-
-
+      className="relative z-[5] w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justify-start text-left space-y-6"
     >
       {/* Background glow */}
       <div className="absolute inset-0 z-0 pointer-events-none">
@@ -134,22 +132,20 @@ className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justi
       </motion.h2>
 
       {/* Chat + Form card */}
-<div
-  className="
-    relative z-10
-    flex flex-col md:flex-row items-stretch justify-center
-    w-full
-    max-w-5xl
-    rounded-3xl
-    bg-gradient-to-br from-zinc-900/70 to-indigo-950/30
-    border border-indigo-800/40
-    shadow-[0_0_40px_rgba(99,102,241,0.3)]
-    backdrop-blur-2xl
-    overflow-hidden overflow-x-hidden
-    md:ml-auto md:mr-[7.5rem]
-  "
->
-
+      <div
+        className="
+          relative z-10
+          flex flex-col md:flex-row items-stretch justify-center
+          w-full max-w-5xl mx-auto
+          rounded-3xl
+          bg-gradient-to-br from-zinc-900/70 to-indigo-950/30
+          border border-indigo-800/40
+          shadow-[0_0_40px_rgba(99,102,241,0.3)]
+          backdrop-blur-2xl
+          overflow-hidden overflow-x-hidden
+          px-2 sm:px-4
+        "
+      >
         {/* Natasha Chat Panel */}
         <div className="w-full md:w-1/2 p-6 sm:p-10 flex flex-col justify-between relative">
           <div className="absolute top-16 left-12 w-[250px] h-[250px] bg-gradient-to-br from-indigo-500/20 via-purple-400/20 to-pink-400/10 blur-[90px] rounded-full animate-pulse" />
@@ -217,7 +213,7 @@ className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justi
         {/* Form Side */}
         {!sent && (
           <div className="w-full md:w-1/2 p-6 sm:p-8 border-t md:border-t-0 md:border-l border-indigo-800/40 bg-zinc-950/40 md:rounded-tr-3xl md:rounded-br-3xl">
-            <form onSubmit={handleNext} className="flex flex-col gap-6">
+            <form onSubmit={handleNext} className="flex flex-col gap-6 relative z-[20]">
               {step >= 0 && (
                 <motion.div
                   key="name"
@@ -235,7 +231,7 @@ className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justi
                     disabled={step > 0}
                     placeholder="Enter your name"
                     required
-                    className="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all"
+                    className="w-full bg-black/20 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all text-gray-200"
                   />
                 </motion.div>
               )}
@@ -256,7 +252,7 @@ className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justi
                     disabled={step > 1}
                     placeholder="Enter your email"
                     required
-                    className="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all"
+                    className="w-full bg-black/20 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all text-gray-200"
                   />
                 </motion.div>
               )}
@@ -275,7 +271,7 @@ className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justi
                     rows={4}
                     placeholder="Your message..."
                     required
-                    className="w-full bg-transparent border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all resize-none"
+                    className="w-full bg-black/20 border border-gray-700 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-pink-500 focus:ring-1 focus:ring-pink-500 transition-all resize-none text-gray-200"
                   />
                 </motion.div>
               )}
