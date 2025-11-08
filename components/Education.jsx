@@ -12,7 +12,7 @@ const education = [
     icon: "🎓",
     highlights: [
       "Graduate Assistant (Web Developer)",
-      "GPA: 3.9 / 4.0",
+      "GPA: 4.0 / 4.0",
       "Focus: Web Tech, DB Security, Machine Learning",
     ],
   },
@@ -160,3 +160,4 @@ export default function Education() {
     </section>
   );
 }
+
