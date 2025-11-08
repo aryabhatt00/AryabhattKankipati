@@ -79,7 +79,8 @@ export default function HomeMobile({ active, setActive, scrollToSection, refs })
       </div>
 
       {/* Bottom Nav */}
-      <div className="fixed bottom-0 left-0 w-full z-50 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-md border-t border-indigo-800/30 px-4 py-2 flex justify-between items-center">
+      <div className="fixed bottom-0 left-0 w-full z-30 sm:z-40 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-md border-t border-indigo-800/30 px-4 py-2 flex justify-between items-center pointer-events-auto">
+
         {sections.map(({ id, label, icon: Icon }) => {
           const isActive = active === id;
           return (
