@@ -11,7 +11,7 @@ const experience = [
   {
     role: "Graduate Assistant",
     company: "Eastern Illinois University",
-    duration: "Sep 2024 – Present",
+    duration: "Dec 2024 – Present",
     icon: "🎓",
     impact: { backend: 85, frontend: 80, devops: 45, data: 75 },
     points: [
@@ -136,3 +136,4 @@ export default function Experience() {
     </section>
   );
 }
+
