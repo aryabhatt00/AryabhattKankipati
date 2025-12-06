@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 // © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
 // Icons
+
 import { FaJava, FaReact, FaDocker, FaAws, FaSalesforce } from "react-icons/fa";
 import {
   SiSpringboot,
@@ -116,7 +117,8 @@ const iconMap = {
 
 const TechStack = () => {
   return (
-    <section className="w-full px-10 space-y-12">
+    <section className="w-full max-w-[1100px] mx-auto px-10 space-y-4">
+
       <motion.h2
         className="text-3xl font-bold text-teal-400 text-center"
         initial={{ opacity: 0, y: 30 }}

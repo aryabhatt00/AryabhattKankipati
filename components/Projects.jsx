@@ -3,9 +3,9 @@
 
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
+import { Github } from "lucide-react";
 
 const projects = [
   {
@@ -23,7 +23,6 @@ const projects = [
     description:
       "AI-powered receipt scanner and smart split engine that identifies items, extracts prices, and calculates individual shares automatically using OCR + Spring Boot + Salesforce integration.",
     stack: ["Spring Boot", "React", "MongoDB", "Google Vision API"],
-    
     icon: "🧾",
     solution:
       "Simplified expense sharing for users by automating receipt-based split calculations securely and accurately.",
@@ -41,7 +40,7 @@ const projects = [
   {
     title: "OPS Tool – Internal Analytics Platform",
     description:
-      "Java Full Stack analytics platform for operational data visualization and workflow automation. Achieved 75% reduction in manual effort and 60% improvement in data insights via Chart.js dashboards and optimized SQL workflows.",
+      "Java Full Stack analytics platform for operational data visualization and workflow automation. Achieved 75% reduction in manual effort and 60% improvement in data insights.",
     stack: ["Java", "Spring Boot", "Hibernate", "SQL", "HTML", "CSS", "Chart.js"],
     github: "",
     icon: "📊",
@@ -51,7 +50,7 @@ const projects = [
   {
     title: "TEMBUSU – Banking Project",
     description:
-      "Contributed backend logic and PL/SQL automation for maturity date handling across financial departments. Focused on scheduling validation and data accuracy for banking processes.",
+      "Contributed backend logic and PL/SQL automation for maturity date handling across financial departments.",
     stack: ["PL/SQL", "Oracle Database"],
     github: "",
     icon: "🏛️",
@@ -61,7 +60,7 @@ const projects = [
   {
     title: "Intelligent Robot for Smart City",
     description:
-      "AI-based Raspberry Pi robot for real-time waste classification and autonomous collection. Integrated with Blynk IoT for remote control, using Google Teachable Machine for ML model deployment.",
+      "AI-based Raspberry Pi robot for real-time waste classification and autonomous collection.",
     stack: ["Python", "Raspberry Pi", "Teachable Machine", "Blynk"],
     github: "",
     icon: "🤖",
@@ -71,56 +70,61 @@ const projects = [
   {
     title: "Smart Garbage Monitoring System",
     description:
-      "Built a Wi-Fi enabled garbage bin that sends alerts via Blynk when full. Used ultrasonic sensors and ESP8266 with Embedded C for cost-effective smart city waste solutions.",
+      "Built a Wi-Fi enabled garbage bin with ultrasonic sensors and ESP8266 sending real-time alerts.",
     stack: ["Arduino", "Ultrasonic Sensor", "ESP8266", "Blynk IoT", "Embedded C"],
     github: "https://github.com/aryabhatt00/SmartGarbageDustbin",
     icon: "🗑️",
     solution:
-      "Enabled real-time waste monitoring by sending alerts when bins were full, improving city cleanliness efficiency.",
+      "Enabled efficient waste monitoring by alerting when bins were full.",
   },
   {
     title: "Wine Quality Prediction",
     description:
-      "Classified wine samples into quality levels using Logistic Regression, KNN, SVM, and Random Forest, with EDA and feature scaling.",
+      "Classified wine samples into quality levels using Logistic Regression, KNN, SVM, and Random Forest.",
     stack: ["Python", "Pandas", "Sklearn", "Matplotlib"],
     github:
       "https://github.com/aryabhatt00/TCR_ML_PROJECTS/tree/main/Wine%20Quality%20Prediction",
     icon: "🍷",
     solution:
-      "Helped winemakers evaluate quality more accurately using data-driven classification techniques.",
+      "Helped winemakers evaluate quality more accurately using ML techniques.",
   },
   {
     title: "Gold Price Prediction",
     description:
-      "Built a regression model using Random Forest and XGBoost to forecast future gold prices based on economic indicators.",
+      "Built a regression model using Random Forest and XGBoost to forecast gold prices.",
     stack: ["Python", "Pandas", "Sklearn", "XGBoost"],
     github:
       "https://github.com/aryabhatt00/TCR_ML_PROJECTS/tree/main/Price%20of%20gold",
     icon: "🪙",
     solution:
-      "Enabled financial forecasting for investors by predicting commodity trends through machine learning.",
+      "Enabled financial forecasting through ML-based commodity trend prediction.",
   },
   {
     title: "Credit Card Fraud Detection",
     description:
-      "Built a fraud detection model using Logistic Regression and SMOTE oversampling, achieving strong recall on imbalanced data.",
+      "Developed a fraud detection model using Logistic Regression & SMOTE oversampling.",
     stack: ["Python", "Sklearn", "Pandas", "SMOTE"],
     github:
       "https://github.com/aryabhatt00/TCR_ML_PROJECTS/tree/main/Credit%20Card%20Fraud%20Detection",
     icon: "💳",
     solution:
-      "Reduced undetected fraud cases by building a balanced model that flags anomalies in real time.",
+      "Reduced fraud by identifying anomalies in highly imbalanced datasets.",
   },
 ];
 
 export default function Projects() {
+  const [showAll, setShowAll] = useState(false);
+
+  const visibleProjects = showAll ? projects : projects.slice(0, 4);
+
   return (
     <section
       id="projects"
-      className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justify-start text-left space-y-6"
+      className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-10 flex flex-col justify-start text-left space-y-6"
     >
+      {/* Heading */}
       <motion.h2
-        className="text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-snug"
+        className="text-3xl font-bold text-center bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-snug"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -128,8 +132,9 @@ export default function Projects() {
         Real-World Problem Solving
       </motion.h2>
 
+      {/* PROJECT CARDS */}
       <div className="flex flex-col gap-8">
-        {projects.map((project, index) => (
+        {visibleProjects.map((project, index) => (
           <motion.div
             key={index}
             whileHover={{
@@ -139,18 +144,15 @@ export default function Projects() {
             transition={{ duration: 0.15, ease: "easeOut" }}
             className="relative rounded-2xl border border-white/10 bg-transparent p-5 overflow-hidden max-w-[1100px] group"
           >
-            {/* visible gradient background layer */}
             <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/10 via-purple-900/10 to-pink-900/10 pointer-events-none"></div>
-
-            {/* 🔹 frosted blur only behind text, fading at bottom */}
             <div className="absolute inset-0 bg-black/20 backdrop-blur-[14px] mask-fade pointer-events-none"></div>
 
-            {/* Foreground content */}
             <div className="relative z-10 flex flex-col md:flex-row md:items-start md:justify-between gap-2 md:gap-4 text-gray-300">
               <div className="flex-1 space-y-2">
                 <div className="text-sm font-semibold text-indigo-400 group-hover:text-pink-400 transition duration-200">
                   {project.icon} {project.title}
                 </div>
+
                 <p className="text-sm text-gray-300 leading-snug">
                   {project.description}
                 </p>
@@ -177,23 +179,27 @@ export default function Projects() {
               </div>
 
               {project.github && (
-                <div className="flex flex-col md:items-end gap-2 mt-4 md:mt-0">
-                  <div className="flex gap-4 text-gray-300">
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sm text-indigo-400 hover:text-pink-400 transition"
-                    >
-                      <Github className="w-4 h-4" />
-                      GitHub
-                    </a>
-                  </div>
-                </div>
+                <a
+                  href={project.github}
+                  target="_blank"
+                  className="flex items-center gap-1 text-sm text-indigo-400 hover:text-pink-400 transition mt-4 md:mt-0"
+                >
+                  <Github className="w-4 h-4" /> GitHub
+                </a>
               )}
             </div>
           </motion.div>
         ))}
+      </div>
+
+      {/* SHOW MORE BUTTON */}
+      <div className="flex justify-center mt-6">
+        <button
+          onClick={() => setShowAll(!showAll)}
+          className="px-6 py-2 rounded-full bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white font-medium shadow-md hover:shadow-pink-500/30 transition-all"
+        >
+          {showAll ? "Show Less ▲" : "Show More ▼"}
+        </button>
       </div>
     </section>
   );

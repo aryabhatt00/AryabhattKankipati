@@ -58,7 +58,8 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="w-full py-20 px-6 sm:px-10 md:px-20 text-white flex flex-col justify-start"
+      className="w-full py-6 px-6 sm:px-10 md:px-20 text-white flex flex-col justify-start"
+
     >
       {/* Title */}
       <motion.h2

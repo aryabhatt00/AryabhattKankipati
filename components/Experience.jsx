@@ -11,7 +11,7 @@ const experience = [
   {
     role: "Graduate Assistant",
     company: "Eastern Illinois University",
-    duration: "Dec 2024 – Present",
+    duration: "Sep 2024 – Present",
     icon: "🎓",
     impact: { backend: 85, frontend: 80, devops: 45, data: 75 },
     points: [
@@ -76,13 +76,15 @@ const experience = [
 
 export default function Experience() {
   return (
-    <section
-      id="experience"
-      className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-32 flex flex-col justify-start text-left space-y-6"
-    >
+<section
+  id="experience"
+  className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-6 flex flex-col justify-start text-left space-y-6"
+>
+
       {/* Section Title */}
-      <motion.h2
-        className="text-3xl font-bold bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-snug"
+     <motion.h2
+  className="text-3xl font-bold text-center bg-gradient-to-r from-indigo-400 via-purple-400 to-pink-400 text-transparent bg-clip-text leading-snug"
+
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
@@ -136,4 +138,3 @@ export default function Experience() {
     </section>
   );
 }
-

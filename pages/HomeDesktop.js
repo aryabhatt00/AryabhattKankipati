@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import {
   Home as HomeIcon,
   Code,
@@ -16,62 +15,69 @@ import Education from "@/components/Education";
 import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-// © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
+
 export default function HomeDesktop({ active, scrollToSection, refs }) {
   const {
-  aboutRef,
-  techRef,
-  educationRef,
-  experienceRef,
-  projectsRef,
-  contactRef,
-} = refs || {};
-
+    aboutRef,
+    techRef,
+    educationRef,
+    experienceRef,
+    projectsRef,
+    contactRef,
+  } = refs || {};
 
   return (
     <div className="hidden lg:flex w-full">
-      {/* LEFT - Sticky Profile Panel */}
-      <div className="w-[26%] fixed top-0 left-0 h-screen z-40 border-r border-gray-800 bg-gradient-to-b from-indigo-900/30 via-black to-black">
+
+      {/* LEFT PROFILE PANEL — NOW DYNAMIC */}
+      <div className="w-[26%] fixed top-0 left-0 h-screen z-40 border-r border-gray-800 
+        bg-gradient-to-b from-indigo-900/30 via-black to-black">
         <div className="h-full flex items-center justify-center">
-          <ProfilePanel />
+          <ProfilePanel section={active} />
         </div>
       </div>
 
-      {/* RIGHT - Scrollable Sections (Page scrolls, not inner div) */}
-      <div className="w-[74%] ml-[26%] scroll-smooth ">
-        {/* Hero Section */}
-        <section ref={aboutRef} id="about" className="min-h-screen flex items-center px-20">
+      {/* RIGHT CONTENT */}
+      <div className="w-[74%] ml-[26%] scroll-smooth">
+
+        {/* HERO */}
+        <section ref={aboutRef} id="about" className="py-16 px-20">
           <HeroIntro />
         </section>
 
-        {/* Tech Stack */}
-        <section ref={techRef} id="tech" className="min-h-screen flex items-center justify-center px-20">
+        {/* TECH STACK */}
+        <section ref={techRef} id="tech" className="py-16 px-20">
           <TechStack />
         </section>
 
-        {/* Education */}
-        <section ref={educationRef} id="education" className="min-h-screen px-20 py-10">
+        {/* EDUCATION */}
+        <section ref={educationRef} id="education" className="py-16 px-20">
           <Education />
         </section>
 
-        {/* Experience */}
-        <section ref={experienceRef} id="experience" className="min-h-screen px-20 py-10">
+        {/* EXPERIENCE */}
+        <section ref={experienceRef} id="experience" className="py-16 px-20">
           <Experience />
         </section>
 
-        {/* Projects */}
-        <section ref={projectsRef} id="projects" className="min-h-screen px-20 py-10">
+        {/* PROJECTS */}
+        <section ref={projectsRef} id="projects" className="py-16 px-20">
           <Projects />
         </section>
 
-        {/* Contact */}
-        <section ref={contactRef} id="contact" className="min-h-screen px-20 py-10">
+        {/* CONTACT */}
+        <section ref={contactRef} id="contact" className="py-16 px-20">
           <Contact />
         </section>
+
       </div>
 
-      {/* RIGHT-SIDE NAVIGATION */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex flex-col items-center gap-10 bg-gradient-to-b from-indigo-900/40 to-purple-900/20 backdrop-blur-xl border border-indigo-800/30 rounded-3xl p-6 shadow-[0_0_25px_5px_rgba(99,102,241,0.2)]">
+      {/* RIGHT NAVIGATION */}
+      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex
+        flex-col items-center gap-10
+        bg-gradient-to-b from-indigo-900/40 to-purple-900/20
+        backdrop-blur-xl border border-indigo-800/30 rounded-3xl p-6">
+
         {[
           { id: "about", label: "Home", icon: HomeIcon },
           { id: "tech", label: "Skills", icon: Code },
@@ -96,17 +102,19 @@ export default function HomeDesktop({ active, scrollToSection, refs }) {
               >
                 <Icon
                   size={30}
-                  className={`transition-all duration-500 ${
+                  className={
                     isActive
                       ? "text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)] scale-110"
                       : "text-gray-400 group-hover:text-white"
-                  }`}
+                  }
                 />
               </div>
+
               <span
-                className={`absolute right-20 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-sm font-semibold opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 transition-all duration-500 ${
-                  isActive ? "opacity-100 translate-x-0" : ""
-                }`}
+                className={`absolute right-20 top-1/2 -translate-y-1/2 px-3 py-1 rounded-md 
+                  bg-gradient-to-r from-indigo-700 to-purple-700 text-white text-sm font-semibold 
+                  opacity-0 group-hover:opacity-100 translate-x-2 group-hover:translate-x-0 
+                  transition-all duration-500 ${isActive ? "opacity-100 translate-x-0" : ""}`}
               >
                 {label}
               </span>

@@ -16,16 +16,17 @@ import {
   Mail,
   FolderOpen,
 } from "lucide-react";
+
 // © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
 export default function HomeMobile({ active, setActive, scrollToSection, refs }) {
   const {
-  aboutRef,
-  techRef,
-  educationRef,
-  experienceRef,
-  projectsRef,
-  contactRef,
-} = refs || {};
+    aboutRef,
+    techRef,
+    educationRef,
+    experienceRef,
+    projectsRef,
+    contactRef,
+  } = refs || {};
 
   const sections = [
     { id: "about", label: "Home", icon: HomeIcon, ref: aboutRef },
@@ -39,47 +40,60 @@ export default function HomeMobile({ active, setActive, scrollToSection, refs })
   return (
     <main className="bg-black text-white overflow-y-auto pb-24">
 
+      {/* MOBILE PAGE CONTENT */}
       <div className="flex flex-col">
-        <section id="about" ref={aboutRef} className="py-8 px-6">
+
+        {/* ABOUT SECTION */}
+        <section id="about" ref={aboutRef} className="py-4 px-6">
           <div className="max-w-2xl mx-auto">
             <ProfilePanel />
             <HeroIntro />
           </div>
         </section>
 
-        <section id="tech" ref={techRef} className="py-8 px-6">
+        {/* TECH STACK */}
+        <section id="tech" ref={techRef} className="py-4 px-6">
           <div className="max-w-2xl mx-auto">
             <TechStack />
           </div>
         </section>
 
-        <section id="education" ref={educationRef} className="py-8 px-6">
+        {/* EDUCATION */}
+        <section id="education" ref={educationRef} className="py-4 px-6">
           <div className="max-w-2xl mx-auto">
             <Education />
           </div>
         </section>
 
-        <section id="experience" ref={experienceRef} className="py-8 px-6">
+        {/* EXPERIENCE */}
+        <section id="experience" ref={experienceRef} className="py-4 px-6">
           <div className="max-w-2xl mx-auto">
             <Experience />
           </div>
         </section>
 
-        <section id="projects" ref={projectsRef} className="py-8 px-6">
+        {/* PROJECTS */}
+        <section id="projects" ref={projectsRef} className="py-4 px-6">
           <div className="max-w-2xl mx-auto">
             <Projects />
           </div>
         </section>
 
-        <section id="contact" ref={contactRef} className="py-8 px-6">
+        {/* CONTACT */}
+        <section id="contact" ref={contactRef} className="py-4 px-6">
           <div className="max-w-2xl mx-auto">
             <Contact />
           </div>
         </section>
+
       </div>
 
-      {/* Bottom Nav */}
-      <div className="fixed bottom-0 left-0 w-full z-30 sm:z-40 bg-gradient-to-t from-black/80 to-transparent backdrop-blur-md border-t border-indigo-800/30 px-4 py-2 flex justify-between items-center pointer-events-auto">
+      {/* BOTTOM NAVIGATION BAR */}
+      <div className="fixed bottom-0 left-0 w-full z-30 sm:z-40 
+        bg-gradient-to-t from-black/80 to-transparent 
+        backdrop-blur-md border-t border-indigo-800/30 
+        px-4 py-2 flex justify-between items-center pointer-events-auto"
+      >
 
         {sections.map(({ id, label, icon: Icon }) => {
           const isActive = active === id;
@@ -115,6 +129,7 @@ export default function HomeMobile({ active, setActive, scrollToSection, refs })
             </button>
           );
         })}
+
       </div>
     </main>
   );

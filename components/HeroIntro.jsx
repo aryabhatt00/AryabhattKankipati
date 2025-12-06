@@ -2,7 +2,8 @@ import React from "react";
 // © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
 export default function HeroIntro() {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
+    <div className="relative w-full min-h-[85vh] md:min-h-screen overflow-hidden flex items-center">
+
       
       {/* Background Video */}
       {/* <video
