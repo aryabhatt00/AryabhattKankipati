@@ -73,10 +73,11 @@ export default function HomeDesktop({ active, scrollToSection, refs }) {
       </div>
 
       {/* RIGHT NAVIGATION */}
-      <div className="fixed right-6 top-1/2 -translate-y-1/2 z-50 hidden lg:flex
-        flex-col items-center gap-10
-        bg-gradient-to-b from-indigo-900/40 to-purple-900/20
-        backdrop-blur-xl border border-indigo-800/30 rounded-3xl p-6">
+<div className="fixed right-0 top-1/2 -translate-y-1/2 z-50 hidden lg:flex 
+  flex-col items-center gap-6 
+  bg-black/30 backdrop-blur-md border border-indigo-800/20
+  rounded-2xl p-3 shadow-lg">
+
 
         {[
           { id: "about", label: "Home", icon: HomeIcon },
