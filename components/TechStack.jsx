@@ -117,7 +117,10 @@ const iconMap = {
 
 const TechStack = () => {
   return (
-    <section className="w-full max-w-[1100px] mx-auto px-10 space-y-4">
+    <section
+      id="tech"
+      className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-6 max-w-[1100px] mx-auto space-y-4"
+    >
 
       <motion.h2
         className="text-3xl font-bold text-teal-400 text-center"

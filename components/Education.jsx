@@ -58,7 +58,8 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="w-full py-6 px-6 sm:px-10 md:px-20 text-white flex flex-col justify-start"
+      className="w-full px-6 sm:px-10 md:pl-20 md:pr-36 pt-6 pb-6 flex flex-col justify-start text-left"
+
 
     >
       {/* Title */}

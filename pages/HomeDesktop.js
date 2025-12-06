@@ -41,32 +41,32 @@ export default function HomeDesktop({ active, scrollToSection, refs }) {
       <div className="w-[74%] ml-[26%] scroll-smooth">
 
         {/* HERO */}
-        <section ref={aboutRef} id="about" className="py-16 px-20">
+        <section ref={aboutRef} id="about" className="py-14 px-20">
           <HeroIntro />
         </section>
 
         {/* TECH STACK */}
-        <section ref={techRef} id="tech" className="py-16 px-20">
+        <section ref={techRef} id="tech" className="py-14 px-20">
           <TechStack />
         </section>
 
         {/* EDUCATION */}
-        <section ref={educationRef} id="education" className="py-16 px-20">
+        <section ref={educationRef} id="education" className="py-14 px-20">
           <Education />
         </section>
 
         {/* EXPERIENCE */}
-        <section ref={experienceRef} id="experience" className="py-16 px-20">
+        <section ref={experienceRef} id="experience" className="py-14 px-20">
           <Experience />
         </section>
 
         {/* PROJECTS */}
-        <section ref={projectsRef} id="projects" className="py-16 px-20">
+        <section ref={projectsRef} id="projects" className="py-14 px-20">
           <Projects />
         </section>
 
         {/* CONTACT */}
-        <section ref={contactRef} id="contact" className="py-16 px-20">
+        <section ref={contactRef} id="contact" className="py-14 px-20">
           <Contact />
         </section>
 
