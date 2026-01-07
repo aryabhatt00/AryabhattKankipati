@@ -58,7 +58,7 @@ const ProfilePanel = () => {
           GitHub
         </a>
         <a
-          href="https://www.linkedin.com/in/aryabhatt-narasimha-rao-kankipati-58644a1a2/"
+          href="https://www.linkedin.com/in/arya-kankipati-58644a1a2/"
           target="_blank"
           rel="noopener noreferrer"
           className="text-gray-400 hover:text-white"
@@ -72,4 +72,5 @@ const ProfilePanel = () => {
 };
 
 export default ProfilePanel;
+
 
