@@ -1,6 +1,6 @@
 import React from "react";
 import { TypeAnimation } from "react-type-animation";
-// © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: aryabhatt-narasimha-rao-kankipati
+// © 2025 Aryabhatt Narasimha Rao Kankipati | GitHub: @aryabhatt00 | LinkedIn: arya-kankipati
 
 const ProfilePanel = () => {
   return (
@@ -27,7 +27,7 @@ const ProfilePanel = () => {
       {/* Name & Animated Role Titles */}
       <div className="text-center">
         <h2 className="text-2xl font-bold text-white leading-snug">
-          Aryabhatt Narasimha Rao Kankipati
+          Arya Kankipati
         </h2>
 
         <TypeAnimation
@@ -72,3 +72,4 @@ const ProfilePanel = () => {
 };
 
 export default ProfilePanel;
+
